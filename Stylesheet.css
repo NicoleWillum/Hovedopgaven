@@ -1,0 +1,128 @@
+body {
+    font-family: sans-serif;
+    background-color: #b6a5c7;
+    margin: 1em;
+    background-image: url(blomsterbaggrund.webp);
+    
+}
+
+p {
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}
+
+#gridcontainer { /* Gridcontainer til at holde styr på de forskellige elementer i vores dokument */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    grid-gap: 5px;
+    grid-template-areas: 
+    "generator"
+    "knap"
+    "Tekstboks";
+}
+
+#generator {
+    grid-area: generator;
+    text-align: center;
+    font-family: "dashiell-fine", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#Tekstboks {
+    text-align: center;
+    font-family: "dashiell-fine", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3em;
+    color: white;
+    margin-top: 70px;
+}
+
+#logo {
+    height: 100px;
+}
+#knap {
+    background-color: none;
+    grid-area: knap;
+    text-align: center;
+}
+
+button {
+    background-color: white;
+    padding-block: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 30px;
+    color: black;
+    font-size: 1.4em;
+    font-family: "dashiell-fine", serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.5em;
+    border: none;
+}
+#knap :hover {
+    background-color: #D6B7D6;
+}
+#dinblomst {
+    background-color: none;
+    grid-area: dinblomst;
+    text-align: center;
+    height: 400px;
+}
+
+
+
+@media screen and (min-width: 550px) { /* tablet view */
+    body {
+        background-color: #ca99ca;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+
+    #logo {
+        height: 100px;
+    }
+
+    #gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-gap: 5px;
+        grid-template-areas: 
+        "generator"
+        "knap";
+    }
+
+}
+@media screen and (min-width: 1000px) { /* fuldskærms view */
+    body {
+        background-color:#BBA9CB ;
+        color: white;
+    }
+    #dinblomst {
+        background-color: none;
+        grid-area: dinblomst;
+        text-align: center;
+        height: 500px;
+    }
+
+    #gridcontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr;
+        grid-gap: 5px;
+        grid-template-areas: 
+        "generator"
+        "knap";
+    }
+}
+
